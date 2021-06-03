@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- COMPLETED (2) Create the version of dimens that will be used when the smallest width of the screen is 600dp -->
+<resources>
+    <dimen name="activity_vertical_margin">24dp</dimen>
+    <dimen name="activity_horizontal_margin">24dp</dimen>
+
+</resources>
+
+

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.timemoneywaste.flames">
+
+        <application
+            android:allowBackup="true"
+            android:icon="@mipmap/flames"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/flames"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme"
+            tools:ignore="GoogleAppIndexingWarning">
+
+<!--Config change- it helps to avoid data loass while rotate scree.-->
+<!--Scrren orientation as you know            -->
+
+            <activity android:name=".homepage"
+                android:configChanges="orientation|screenSize|keyboardHidden"
+                android:screenOrientation="portrait">
+
+
+                <intent-filter>
+                    <action android:name="android.intent.action.MAIN" />
+
+                    <category android:name="android.intent.category.LAUNCHER" />
+                </intent-filter>
+            </activity>
+
+<!--Launch moda very import wirtten in the note and have picutre also, it will decide previouse activity should be alive or not             -->
+
+            <activity android:name=".MainActivity"
+                android:launchMode="singleTask"
+                 android:configChanges="orientation|screenSize|keyboardHidden"
+                android:screenOrientation="portrait">
+
+            </activity>
+
+<!--            Parent activity nu pota dhan arrow iruka back buttonpress panrapa it will go parent activity -->
+
+            <activity android:name=".display_Data"
+                android:parentActivityName=".MainActivity"
+                android:configChanges="orientation|screenSize|keyboardHidden"/>
+
+            <!--          indha line onsavedinstance madhri, for avoid data loss when you are rotating screen-->
+
+        </application>
+
+    </manifest>
